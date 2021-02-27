@@ -1,0 +1,105 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+
+// FORMULARZ KONTAKTOWY
+
+.contact-box {
+  background: linear-gradient(#7F813D, #1B401C, #616235) no-repeat;
+  //height: 100vh;
+}
+
+.form-control {
+  //border-color: #d7d7d7;
+  box-shadow: none;
+  width: 100%;
+  margin-top: 15px;
+
+
+}
+
+.form-control:focus, .btn:focus {
+  border-color: #234E23;
+  box-shadow: 0 0 8px #2A5A29;
+}
+
+.contact-form {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 50px 0;
+
+}
+
+.contact-form form {
+  background: #fff;
+  padding: 35px 10px;
+  border-radius: 6px;
+  width: 70%;
+  margin: 50px auto;
+  font-size: 0.9em;
+
+}
+
+@include desktop {
+  .contact-form {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.contact-form h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0 0 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control, .contact-form .btn {
+  border-radius: 2px;
+  min-height: 35px;
+  transition: all 0.5s;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form .btn {
+  background: #cfa084;
+  font-size: 1.1em;
+  min-height: 40px;
+  width: 60%;
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $fontPlayfair;
+}
+
+.contact-form .btn:hover, .contact-form .btn:focus {
+  background: #BF8969;
+  outline: none;
+}
+
+.contact-form .btn i {
+  font-size: 1em;
+  margin-right: 7px;
+
+}
+
+.contact-form label {
+  color: #b1a6a6;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  width: 100%;
+}
+
+.contact-icon {
+  height: 2.7em;
+  width: auto;
+  margin-bottom: 18px;
+}

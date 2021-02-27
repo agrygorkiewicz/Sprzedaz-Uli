@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+  font-family: $fontPlayfair;
+width: 100vw;
+
+
+}
+
+@include desktop {
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+
