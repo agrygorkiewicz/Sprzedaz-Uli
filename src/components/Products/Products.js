@@ -17,8 +17,7 @@ const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
         filterHandler();
-        // eslint-disable-next-line no-use-before-define
-    },[ products, status]);
+    });
 
 
     const onAdd = (product) => {
