@@ -1,13 +1,12 @@
 import firebase from "firebase";
 
 const firebaseApp = firebase.initializeApp({
-        apiKey: "AIzaSyD-AI0GHu5ZSsUjXkEDcvJVbuudizU6zZM",
-        authDomain: "contact-form-c7343.firebaseapp.com",
-        databaseURL: "https://contact-form-c7343.firebaseio.com",
-        projectId: "contact-form-c7343",
-        storageBucket: "contact-form-c7343.appspot.com",
-        messagingSenderId: "1024157331745",
-        appId: "1:1024157331745:web:19dab53c859d702cf68e60"
+        apiKey: "AIzaSyC4O6wV5JRc5oE5HboNl_M9KggHHm89iqQ",
+        authDomain: "sprzedazuli.firebaseapp.com",
+        projectId: "sprzedazuli",
+        storageBucket: "sprzedazuli.appspot.com",
+        messagingSenderId: "49055142501",
+        appId: "1:49055142501:web:ca4c303a9155c6c81f2c8c"
 })
 
 const db = firebaseApp.firestore();

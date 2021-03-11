@@ -10,10 +10,9 @@ import Header from "./Header/Header-Products.js"
 // noinspection JSUnusedAssignment
 const Products = () => {
     const {products} = data;
-
-const [status, setStatus] = useState("low-roof");
-const [filteredProducts, setFilteredProducts] = useState([]);
-const [cartItems, setCartItems] = useState([]);
+    const [status, setStatus] = useState("low-roof");
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
         filterHandler();
@@ -41,27 +40,26 @@ const [cartItems, setCartItems] = useState([]);
             );
         }
     }
-const statusHandler = (e) => {
+    const statusHandler = (e) => {
         setStatus(e.target.value);
-}
+    }
 
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
-const filterHandler = () => {
-        switch(status) {
+    const filterHandler = () => {
+        switch (status) {
             case "low-roof":
-                setFilteredProducts(products.filter( function (products) {
-                    return((products.category === "low"))
+                setFilteredProducts(products.filter(function (products) {
+                    return ((products.category === "low"))
                 }))
-break;
+                break;
             case 'high-roof':
-                setFilteredProducts(products.filter( function (products) {
-                    return(products.category === "high")
+                setFilteredProducts(products.filter(function (products) {
+                    return (products.category === "high")
                 }))
                 break;
             case 'elementy':
-                setFilteredProducts(products.filter( function (products) {
-                    return(products.category === "element")
+                setFilteredProducts(products.filter(function (products) {
+                    return (products.category === "element")
                 }))
                 break;
             default:
@@ -69,8 +67,7 @@ break;
                 break;
 
         }
-}
-
+    }
 
 
     const [tableVisable, setTableVisable] = useState(false);
@@ -79,11 +76,9 @@ break;
     }
 
 
-
     return (
         <>
             <div className="container">
-
                 <main>
                     <Header/>
                     <div className="page-title">
@@ -112,16 +107,16 @@ break;
                     </div>
 
 
-<div className="select">
-    <p>Wybierz kategorię produktów: </p>
-<select onChange={statusHandler} name="filtered-list" className="filter-products">
+                    <div className="select">
+                        <p>Wybierz kategorię produktów: </p>
+                        <select onChange={statusHandler} name="filtered-list" className="filter-products">
 
-    <option value="low-roof">Niski daszek</option>
-    <option value="high-roof">Wysoki daszek</option>
-    <option value="elementy">Elementy</option>
-    <option value="all">Wszystkie produkty</option>
-</select>
-</div>
+                            <option value="low-roof">Niski daszek</option>
+                            <option value="high-roof">Wysoki daszek</option>
+                            <option value="elementy">Elementy</option>
+                            <option value="all">Wszystkie produkty</option>
+                        </select>
+                    </div>
 
                     <MapProducts onAdd={onAdd} products={products} filteredProducts={filteredProducts}/>
                     <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} countCartItems={cartItems.length}/>
@@ -130,9 +125,7 @@ break;
                     <div className="col-lg-4">
                         <div className="card">
                             <div className="card-body">
-
                                 <h4 className="card-price text-center">Dennica higieniczna</h4>
-
                                 <ul className="fa-ul">
                                     <li><strong>Kod: A014</strong></li>
                                     <li>Cena netto: 56 zł
@@ -140,17 +133,14 @@ break;
                                     <li>Cena brutto: 70 zł
                                     </li>
                                 </ul>
-
-                                <button 
-                                        className="btn btn-block btn-primary text-uppercase">Wybierz
+                                <button
+                                    className="btn btn-block btn-primary text-uppercase">Wybierz
                                 </button>
                             </div>
                         </div>
                         <div className="card">
                             <div className="card-body">
-
                                 <h4 className="card-price text-center">Korpus 1/1</h4>
-
                                 <ul className="fa-ul">
                                     <li><strong>Kod: A015</strong></li>
                                     <li>Cena netto: 52 zł
@@ -158,15 +148,12 @@ break;
                                     <li>Cena brutto: 65 zł
                                     </li>
                                 </ul>
-
                                 <button className="btn btn-block btn-primary text-uppercase">Wybierz</button>
                             </div>
                         </div>
                         <div className="card">
                             <div className="card-body">
-
                                 <h4 className="card-price text-center">Korpus 1/2</h4>
-
                                 <ul className="fa-ul">
                                     <li><strong>Kod: A016</strong></li>
                                     <li>Cena netto: 40 zł
@@ -174,15 +161,12 @@ break;
                                     <li>Cena brutto: 50 zł
                                     </li>
                                 </ul>
-
                                 <button className="btn btn-block btn-primary text-uppercase">Wybierz</button>
                             </div>
                         </div>
                         <div className="card">
                             <div className="card-body">
-
                                 <h4 className="card-price text-center">Powałka</h4>
-
                                 <ul className="fa-ul">
                                     <li><strong>Kod: A017</strong></li>
                                     <li>Cena netto: 34 zł
@@ -190,15 +174,12 @@ break;
                                     <li>Cena brutto: 43 zł
                                     </li>
                                 </ul>
-
                                 <button className="btn btn-block btn-primary text-uppercase">Wybierz</button>
                             </div>
                         </div>
                         <div className="card">
                             <div className="card-body">
-
                                 <h4 className="card-price text-center">Daszek</h4>
-
                                 <ul className="fa-ul">
                                     <li><strong>Kod: A018</strong></li>
                                     <li>Cena netto: 44 zł
@@ -210,7 +191,6 @@ break;
                             </div>
                         </div>
                     </div>
-
                 </main>
             </div>
         </>
