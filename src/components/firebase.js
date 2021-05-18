@@ -1,12 +1,12 @@
 import firebase from "firebase";
 
 const firebaseApp = firebase.initializeApp({
-        apiKey: "AIzaSyC4O6wV5JRc5oE5HboNl_M9KggHHm89iqQ",
-        authDomain: "sprzedazuli.firebaseapp.com",
-        projectId: "sprzedazuli",
-        storageBucket: "sprzedazuli.appspot.com",
-        messagingSenderId: "49055142501",
-        appId: "1:49055142501:web:ca4c303a9155c6c81f2c8c"
+         apiKey: "AIzaSyDG9rhy_2mBwKhbNeo58C4lT6pB_RJ1IGY",
+    authDomain: "sprzedazuli2.firebaseapp.com",
+    projectId: "sprzedazuli2",
+    storageBucket: "sprzedazuli2.appspot.com",
+    messagingSenderId: "946032787476",
+    appId: "1:946032787476:web:61ce859e093d2d8e3aa701"
 })
 
 const db = firebaseApp.firestore();
